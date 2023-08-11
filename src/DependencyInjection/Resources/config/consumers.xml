@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        https://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service class="Evirma\Bundle\KafkaBundle\Client\Consumer\ConsumerProvider" id="evirma_kafka.client.consumer.consumer_provider"/>
+        <service id="Evirma\Bundle\KafkaBundle\Client\Consumer\ConsumerProvider" alias="evirma_kafka.client.consumer.consumer_provider"/>
+        <service class="Evirma\Bundle\KafkaBundle\Client\Consumer\ConsumerClient" id="evirma_kafka.client.consumer.consumer_client" shared="false">
+            <argument type="service" id="evirma_kafka.rd_kafka.factory.kafka_configuration_factory"/>
+            <argument type="service" id="evirma_kafka.client.consumer.factory.message_factory"/>
+            <argument type="service" id="evirma_kafka.configuration.configuration_resolver"/>
+            <argument type="service" id="event_dispatcher" on-invalid="null"/>
+        </service>
+        <service id="Evirma\Bundle\KafkaBundle\Client\Consumer\ConsumerClient" alias="evirma_kafka.client.consumer.consumer_client"/>
+        <service class="Evirma\Bundle\KafkaBundle\Client\Consumer\Factory\MessageFactory" id="evirma_kafka.client.consumer.factory.message_factory">
+            <argument type="tagged_iterator" tag="evirma_kafka.decoder"/>
+            <argument type="tagged_iterator" tag="evirma_kafka.denormalizer"/>
+            <argument type="service" id="evirma_kafka.validator.validator"/>
+        </service>
+        <service id="Evirma\Bundle\KafkaBundle\Client\Consumer\Factory\MessageFactory" alias="evirma_kafka.client.consumer.factory.message_factory"/>
+    </services>
+</container>

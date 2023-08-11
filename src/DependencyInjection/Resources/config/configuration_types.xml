@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        https://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\Topics" id="evirma_kafka.configuration.type.topics">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\GroupId" id="evirma_kafka.configuration.type.group_id">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\Brokers" id="evirma_kafka.configuration.type.brokers">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\Timeout" id="evirma_kafka.configuration.type.timeout">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\AutoOffsetReset"
+                 id="evirma_kafka.configuration.type.auto_offset_reset">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\AutoCommitIntervalMs"
+                 id="evirma_kafka.configuration.type.auto_commit_interval_ms">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\StatisticsIntervalMs"
+                 id="evirma_kafka.configuration.type.statistics_interval_ms">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\Decoder" id="evirma_kafka.configuration.type.decoder">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\SchemaRegistry"
+                 id="evirma_kafka.configuration.type.schema_registry">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\EnableAutoOffsetStore"
+                 id="evirma_kafka.configuration.type.enable_auto_offset_store">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\EnableAutoCommit"
+                 id="evirma_kafka.configuration.type.enable_auto_commit">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\LogLevel" id="evirma_kafka.configuration.type.log_level">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+<!--        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\RegisterMissingSchemas"-->
+<!--                 id="evirma_kafka.configuration.type.register_missing_schemas">-->
+<!--            <tag name="evirma_kafka.configuration.type"/>-->
+<!--        </service>-->
+<!--        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\RegisterMissingSubjects"-->
+<!--                 id="evirma_kafka.configuration.type.register_missing_subjects">-->
+<!--            <tag name="evirma_kafka.configuration.type"/>-->
+<!--        </service>-->
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\ProducerPartition"
+                 id="evirma_kafka.configuration.type.producer_partition">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\Denormalizer"
+                 id="evirma_kafka.configuration.type.denormalizer">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\MaxRetries"
+                 id="evirma_kafka.configuration.type.max_retries">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\RetryDelay"
+                 id="evirma_kafka.configuration.type.retry_delay">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\RetryMultiplier"
+                 id="evirma_kafka.configuration.type.retry_multiplier">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\MaxRetryDelay"
+                 id="evirma_kafka.configuration.type.max_retry_delay">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\ProducerTopic" id="evirma_kafka.configuration.type.producer_topic">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\Validators" id="evirma_kafka.configuration.type.validators">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+    </services>
+</container>

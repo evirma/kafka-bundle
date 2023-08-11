@@ -1,0 +1,14 @@
+/.idea/
+.phpunit.result.cache
+/var/
+/vendor/
+composer.lock
+phpunit.xml
+
+#local dev exclude
+.env
+/bin/console
+/src/DependencyInjection/Kernel.php
+/config/
+/tests/cache/
+/kafka_config_docs/

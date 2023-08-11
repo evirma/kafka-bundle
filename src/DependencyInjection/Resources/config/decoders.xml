@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        https://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service class="Evirma\Bundle\KafkaBundle\Decoder\PlainDecoder" id="evirma_kafka.decoder.plain_decoder">
+            <tag name="evirma_kafka.decoder"/>
+        </service>
+        <service id="Evirma\Bundle\KafkaBundle\Decoder\PlainDecoder" alias="evirma_kafka.decoder.plain_decoder"/>
+        <service class="Evirma\Bundle\KafkaBundle\Decoder\JsonDecoder" id="evirma_kafka.decoder.json_decoder">
+            <tag name="evirma_kafka.decoder"/>
+        </service>
+        <service id="Evirma\Bundle\KafkaBundle\Decoder\JsonDecoder" alias="evirma_kafka.decoder.json_decoder"/>
+    </services>
+</container>

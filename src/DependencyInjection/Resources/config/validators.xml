@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        https://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service class="Evirma\Bundle\KafkaBundle\Validator\Validator" id="evirma_kafka.validator.validator">
+            <argument type="tagged_iterator" tag="evirma_kafka.validator"/>
+        </service>
+        <service class="Evirma\Bundle\KafkaBundle\Validator\PlainValidator" id="evirma_kafka.validator.type.plain_validator">
+            <tag name="evirma_kafka.validator"/>
+        </service>
+    </services>
+</container>
