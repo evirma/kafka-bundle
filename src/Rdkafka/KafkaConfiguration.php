@@ -27,10 +27,12 @@ class KafkaConfiguration
 
         foreach ($configuration->getConfigurations(ResolvedConfiguration::KAFKA_TYPES) as $kafkaConfiguration) {
             $resolvedValue = $kafkaConfiguration['resolvedValue'];
+
             $value = is_array($resolvedValue) ? implode(',', $resolvedValue) : $resolvedValue;
+
             $conf->set(
                 $kafkaConfiguration['configuration']->getKafkaProperty(),
-                $value
+                (string)$value
             );
         }
 
