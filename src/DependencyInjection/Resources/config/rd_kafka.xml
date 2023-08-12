@@ -5,11 +5,11 @@
         https://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service class="Evirma\Bundle\KafkaBundle\RdKafka\KafkaConfiguration"
+        <service class="Evirma\Bundle\KafkaBundle\Rdkafka\KafkaConfiguration"
                  id="evirma_kafka.rd_kafka.factory.kafka_configuration_factory" shared="false">
             <argument type="service" id="evirma_kafka.configuration.configuration_resolver"/>
         </service>
-        <service id="Evirma\Bundle\KafkaBundle\RdKafka\KafkaConfiguration"
+        <service id="Evirma\Bundle\KafkaBundle\Rdkafka\KafkaConfiguration"
                  alias="evirma_kafka.rd_kafka.factory.kafka_configuration_factory"/>
     </services>
 </container>
