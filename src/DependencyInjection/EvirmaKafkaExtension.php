@@ -24,7 +24,7 @@ class EvirmaKafkaExtension extends ConfigurableExtension implements CompilerPass
     private const XML_CONFIGS = [
         'rd_kafka',
         'consumers',
-//        'commands',
+        'commands',
         'configurations',
         'configuration_types',
         'decoders',
