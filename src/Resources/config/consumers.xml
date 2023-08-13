@@ -14,11 +14,11 @@
             <argument type="service" id="event_dispatcher" on-invalid="null"/>
         </service>
         <service id="Evirma\Bundle\KafkaBundle\Consumer\ConsumerClient" alias="evirma_kafka.client.consumer.consumer_client"/>
-        <service class="Evirma\Bundle\KafkaBundle\Consumer\Factory\MessageFactory" id="evirma_kafka.client.consumer.factory.message_factory">
+        <service class="Evirma\Bundle\KafkaBundle\Consumer\MessageFactory" id="evirma_kafka.client.consumer.factory.message_factory">
             <argument type="tagged_iterator" tag="evirma_kafka.decoder"/>
             <argument type="tagged_iterator" tag="evirma_kafka.denormalizer"/>
             <argument type="service" id="evirma_kafka.validator.validator"/>
         </service>
-        <service id="Evirma\Bundle\KafkaBundle\Consumer\Factory\MessageFactory" alias="evirma_kafka.client.consumer.factory.message_factory"/>
+        <service id="Evirma\Bundle\KafkaBundle\Consumer\MessageFactory" alias="evirma_kafka.client.consumer.factory.message_factory"/>
     </services>
 </container>
