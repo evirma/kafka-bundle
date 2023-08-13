@@ -11,6 +11,7 @@ use Evirma\Bundle\KafkaBundle\Configuration\Type\Decoder;
 use Evirma\Bundle\KafkaBundle\Configuration\Type\Denormalizer;
 use Evirma\Bundle\KafkaBundle\Configuration\Type\EnableAutoCommit;
 use Evirma\Bundle\KafkaBundle\Configuration\Type\EnableAutoOffsetStore;
+use Evirma\Bundle\KafkaBundle\Configuration\Type\EnableGapelessGuarantee;
 use Evirma\Bundle\KafkaBundle\Configuration\Type\EnableIdempotence;
 use Evirma\Bundle\KafkaBundle\Configuration\Type\GroupId;
 use Evirma\Bundle\KafkaBundle\Configuration\Type\LogLevel;
@@ -128,6 +129,10 @@ class Configuration implements ConfigurationInterface
             ->defaultValue((new EnableAutoCommit)->getDefaultValue())
             ->cannotBeEmpty()
             ->end()
+            ->scalarNode(EnableGapelessGuarantee::NAME)
+            ->defaultValue((new EnableGapelessGuarantee)->getDefaultValue())
+            ->cannotBeEmpty()
+            ->end()
             ->scalarNode(EnableIdempotence::NAME)
             ->defaultValue((new EnableIdempotence)->getDefaultValue())
             ->cannotBeEmpty()
@@ -185,6 +190,10 @@ class Configuration implements ConfigurationInterface
             ->end()
             ->scalarNode(EnableIdempotence::NAME)
             ->defaultValue((new EnableIdempotence)->getDefaultValue())
+            ->cannotBeEmpty()
+            ->end()
+            ->scalarNode(EnableGapelessGuarantee::NAME)
+            ->defaultValue((new EnableGapelessGuarantee)->getDefaultValue())
             ->cannotBeEmpty()
             ->end()
             ->scalarNode(ProducerTopic::NAME)

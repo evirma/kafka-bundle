@@ -48,6 +48,11 @@
                  id="evirma_kafka.configuration.type.enable_idempotence">
             <tag name="evirma_kafka.configuration.type"/>
         </service>
+        <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\EnableGapelessGuarantee"
+                 id="evirma_kafka.configuration.type.enable_gapless_guarantee">
+            <tag name="evirma_kafka.configuration.type"/>
+        </service>
+
         <service class="Evirma\Bundle\KafkaBundle\Configuration\Type\LogLevel" id="evirma_kafka.configuration.type.log_level">
             <tag name="evirma_kafka.configuration.type"/>
         </service>
