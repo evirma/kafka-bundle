@@ -198,7 +198,12 @@ class Configuration implements ConfigurationInterface
             ->cannotBeEmpty()
             ->scalarPrototype()
             ->cannotBeEmpty()
-            ->end();
+            ->end()
+            ->scalarNode(EnableIdempotence::NAME)
+            ->defaultValue((new EnableIdempotence)->getDefaultValue())
+            ->cannotBeEmpty()
+            ->end()
+        ;
     }
 
 
