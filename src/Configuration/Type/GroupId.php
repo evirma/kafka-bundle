@@ -42,6 +42,6 @@ class GroupId implements KafkaConfigurationInterface, ConsumerConfigurationInter
 
     public function getDefaultValue(): string
     {
-        return 'sts_gaming_group_kafka';
+        return 'evirma_kafka';
     }
 }

@@ -33,6 +33,6 @@ class ProducerTopic implements ProducerConfigurationInterface
 
     public function getDefaultValue(): string
     {
-        return 'sts_gaming_group_kafka_producer_topic';
+        return 'evirma_kafka_producer_topic';
     }
 }
