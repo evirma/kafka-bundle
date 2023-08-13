@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Evirma\Bundle\KafkaBundle\Command;
 
-use Evirma\Bundle\KafkaBundle\Command\Traits\AddConfigurationsToCommandTrait;
-use Evirma\Bundle\KafkaBundle\Command\Traits\DescribeTrait;
 use Evirma\Bundle\KafkaBundle\Configuration\ConfigurationResolver;
 use Evirma\Bundle\KafkaBundle\Configuration\RawConfiguration;
 use Evirma\Bundle\KafkaBundle\Consumer\ConsumerClient;
 use Evirma\Bundle\KafkaBundle\Consumer\ConsumerProvider;
 use Evirma\Bundle\KafkaBundle\Contract\ConsumerInterface;
+use Evirma\Bundle\KafkaBundle\Traits\AddConfigurationsToCommandTrait;
+use Evirma\Bundle\KafkaBundle\Traits\DescribeTrait;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;

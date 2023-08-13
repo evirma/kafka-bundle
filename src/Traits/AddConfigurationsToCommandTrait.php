@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Evirma\Bundle\KafkaBundle\Command\Traits;
+namespace Evirma\Bundle\KafkaBundle\Traits;
 
 use Evirma\Bundle\KafkaBundle\Configuration\RawConfiguration;
 use Symfony\Component\Console\Command\Command;
