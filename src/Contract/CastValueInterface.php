@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Evirma\Bundle\KafkaBundle\Configuration\Contract;
+namespace Evirma\Bundle\KafkaBundle\Contract;
 
 interface CastValueInterface extends ConfigurationInterface
 {

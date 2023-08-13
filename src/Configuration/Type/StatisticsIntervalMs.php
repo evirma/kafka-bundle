@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Evirma\Bundle\KafkaBundle\Configuration\Type;
 
-use Evirma\Bundle\KafkaBundle\Configuration\Contract\CastValueInterface;
-use Evirma\Bundle\KafkaBundle\Configuration\Contract\ConsumerConfigurationInterface;
-use Evirma\Bundle\KafkaBundle\Configuration\Contract\KafkaConfigurationInterface;
+use Evirma\Bundle\KafkaBundle\Contract\CastValueInterface;
+use Evirma\Bundle\KafkaBundle\Contract\ConsumerConfigurationInterface;
+use Evirma\Bundle\KafkaBundle\Contract\KafkaConfigurationInterface;
 use Symfony\Component\Console\Input\InputOption;
 
 class StatisticsIntervalMs implements ConsumerConfigurationInterface, KafkaConfigurationInterface, CastValueInterface

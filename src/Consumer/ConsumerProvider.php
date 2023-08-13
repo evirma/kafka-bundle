@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Evirma\Bundle\KafkaBundle\Client\Consumer;
+namespace Evirma\Bundle\KafkaBundle\Consumer;
 
-use Evirma\Bundle\KafkaBundle\Client\Consumer\Exception\InvalidConsumerException;
 use Evirma\Bundle\KafkaBundle\Contract\ConsumerInterface;
+use Evirma\Bundle\KafkaBundle\Exception\InvalidConsumerException;
 
 class ConsumerProvider
 {

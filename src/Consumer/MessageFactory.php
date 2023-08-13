@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace Evirma\Bundle\KafkaBundle\Client\Consumer\Factory;
+namespace Evirma\Bundle\KafkaBundle\Consumer;
 
-use Evirma\Bundle\KafkaBundle\Client\Consumer\Message;
 use Evirma\Bundle\KafkaBundle\Configuration\ResolvedConfiguration;
 use Evirma\Bundle\KafkaBundle\Configuration\Type\Decoder;
 use Evirma\Bundle\KafkaBundle\Configuration\Type\Denormalizer;

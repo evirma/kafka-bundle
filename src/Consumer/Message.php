@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Evirma\Bundle\KafkaBundle\Client\Consumer;
+namespace Evirma\Bundle\KafkaBundle\Consumer;
 
 class Message
 {

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Evirma\Bundle\KafkaBundle\Configuration\Type;
 
-use Evirma\Bundle\KafkaBundle\Configuration\Contract\ConsumerConfigurationInterface;
 use Evirma\Bundle\KafkaBundle\Configuration\Traits\ObjectConfigurationTrait;
+use Evirma\Bundle\KafkaBundle\Contract\ConsumerConfigurationInterface;
 use Evirma\Bundle\KafkaBundle\Contract\DecoderInterface;
 use Evirma\Bundle\KafkaBundle\Decoder\JsonDecoder;
 use Evirma\Bundle\KafkaBundle\Decoder\PlainDecoder;

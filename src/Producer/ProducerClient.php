@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Evirma\Bundle\KafkaBundle\Client\Producer;
+namespace Evirma\Bundle\KafkaBundle\Producer;
 
 use Evirma\Bundle\KafkaBundle\Configuration\ConfigurationResolver;
 use Evirma\Bundle\KafkaBundle\Configuration\ResolvedConfiguration;

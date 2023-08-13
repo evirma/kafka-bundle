@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Evirma\Bundle\KafkaBundle\Configuration\Exception;
+namespace Evirma\Bundle\KafkaBundle\Exception;
 
 class InvalidConfigurationException extends \RuntimeException
 {

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Evirma\Bundle\KafkaBundle\Configuration\Type;
 
-use Evirma\Bundle\KafkaBundle\Configuration\Contract\ConsumerConfigurationInterface;
-use Evirma\Bundle\KafkaBundle\Configuration\Contract\KafkaConfigurationInterface;
 use Evirma\Bundle\KafkaBundle\Configuration\Traits\BooleanConfigurationTrait;
+use Evirma\Bundle\KafkaBundle\Contract\ConsumerConfigurationInterface;
+use Evirma\Bundle\KafkaBundle\Contract\KafkaConfigurationInterface;
 
 class EnableAutoOffsetStore implements KafkaConfigurationInterface, ConsumerConfigurationInterface
 {

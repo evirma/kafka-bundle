@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Evirma\Bundle\KafkaBundle\Configuration\Type;
 
-use Evirma\Bundle\KafkaBundle\Configuration\Contract\ProducerConfigurationInterface;
+use Evirma\Bundle\KafkaBundle\Contract\ProducerConfigurationInterface;
 use Symfony\Component\Console\Input\InputOption;
 
 class ProducerPartition implements ProducerConfigurationInterface

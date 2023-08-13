@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Evirma\Bundle\KafkaBundle\DependencyInjection;
 
 
-use Evirma\Bundle\KafkaBundle\Configuration\Contract\ConfigurationInterface;
+use Evirma\Bundle\KafkaBundle\Contract\ConfigurationInterface;
 use Evirma\Bundle\KafkaBundle\Contract\ConsumerInterface;
 use Evirma\Bundle\KafkaBundle\Contract\DecoderInterface;
 use Evirma\Bundle\KafkaBundle\Contract\DenormalizerInterface;

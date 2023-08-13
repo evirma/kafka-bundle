@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Evirma\Bundle\KafkaBundle\Configuration;
 
-use Evirma\Bundle\KafkaBundle\Configuration\Contract\ConfigurationInterface;
-use Evirma\Bundle\KafkaBundle\Configuration\Exception\InvalidConfigurationException;
+use Evirma\Bundle\KafkaBundle\Contract\ConfigurationInterface;
+use Evirma\Bundle\KafkaBundle\Exception\InvalidConfigurationException;
 
 class RawConfiguration
 {

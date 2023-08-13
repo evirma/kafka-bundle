@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Evirma\Bundle\KafkaBundle\Configuration;
 
-use Evirma\Bundle\KafkaBundle\Configuration\Contract\ConfigurationInterface;
-use Evirma\Bundle\KafkaBundle\Configuration\Contract\ConsumerConfigurationInterface;
-use Evirma\Bundle\KafkaBundle\Configuration\Contract\KafkaConfigurationInterface;
-use Evirma\Bundle\KafkaBundle\Configuration\Contract\ProducerConfigurationInterface;
-use Evirma\Bundle\KafkaBundle\Configuration\Exception\InvalidConfigurationType;
+use Evirma\Bundle\KafkaBundle\Contract\ConfigurationInterface;
+use Evirma\Bundle\KafkaBundle\Contract\ConsumerConfigurationInterface;
+use Evirma\Bundle\KafkaBundle\Contract\KafkaConfigurationInterface;
+use Evirma\Bundle\KafkaBundle\Contract\ProducerConfigurationInterface;
+use Evirma\Bundle\KafkaBundle\Exception\InvalidConfigurationType;
 
 class ResolvedConfiguration
 {

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Evirma\Bundle\KafkaBundle\Configuration\Type;
 
-use Evirma\Bundle\KafkaBundle\Configuration\Contract\ConsumerConfigurationInterface;
 use Evirma\Bundle\KafkaBundle\Configuration\Traits\ObjectConfigurationTrait;
+use Evirma\Bundle\KafkaBundle\Contract\ConsumerConfigurationInterface;
 use Evirma\Bundle\KafkaBundle\Contract\DenormalizerInterface;
 use Evirma\Bundle\KafkaBundle\Denormalizer\PlainDenormalizer;
 use Symfony\Component\Console\Input\InputOption;

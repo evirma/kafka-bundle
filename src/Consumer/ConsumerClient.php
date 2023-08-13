@@ -2,11 +2,8 @@
 
 declare(strict_types=1);
 
-namespace Evirma\Bundle\KafkaBundle\Client\Consumer;
+namespace Evirma\Bundle\KafkaBundle\Consumer;
 
-use Evirma\Bundle\KafkaBundle\Client\Consumer\Exception\NullMessageException;
-use Evirma\Bundle\KafkaBundle\Client\Consumer\Exception\RecoverableMessageException;
-use Evirma\Bundle\KafkaBundle\Client\Consumer\Factory\MessageFactory;
 use Evirma\Bundle\KafkaBundle\Configuration\ConfigurationResolver;
 use Evirma\Bundle\KafkaBundle\Configuration\Type\EnableAutoCommit;
 use Evirma\Bundle\KafkaBundle\Configuration\Type\MaxRetries;
@@ -18,6 +15,8 @@ use Evirma\Bundle\KafkaBundle\Configuration\Type\Topics;
 use Evirma\Bundle\KafkaBundle\Contract\ConsumerInterface;
 use Evirma\Bundle\KafkaBundle\Event\PostMessageConsumedEvent;
 use Evirma\Bundle\KafkaBundle\Event\PreMessageConsumedEvent;
+use Evirma\Bundle\KafkaBundle\Exception\NullMessageException;
+use Evirma\Bundle\KafkaBundle\Exception\RecoverableMessageException;
 use Evirma\Bundle\KafkaBundle\Exception\ValidationException;
 use Evirma\Bundle\KafkaBundle\Rdkafka\Context;
 use Evirma\Bundle\KafkaBundle\Rdkafka\KafkaConfiguration;

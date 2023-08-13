@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Evirma\Bundle\KafkaBundle\Configuration;
 
-use Evirma\Bundle\KafkaBundle\Configuration\Contract\CastValueInterface;
-use Evirma\Bundle\KafkaBundle\Configuration\Contract\ConfigurationInterface;
-use Evirma\Bundle\KafkaBundle\Configuration\Exception\InvalidClientException;
-use Evirma\Bundle\KafkaBundle\Configuration\Exception\InvalidConfigurationException;
+use Evirma\Bundle\KafkaBundle\Contract\CastValueInterface;
 use Evirma\Bundle\KafkaBundle\Contract\ClientInterface;
+use Evirma\Bundle\KafkaBundle\Contract\ConfigurationInterface;
 use Evirma\Bundle\KafkaBundle\Contract\ConsumerInterface;
 use Evirma\Bundle\KafkaBundle\Contract\ProducerInterface;
+use Evirma\Bundle\KafkaBundle\Exception\InvalidClientException;
+use Evirma\Bundle\KafkaBundle\Exception\InvalidConfigurationException;
 use Symfony\Component\Console\Input\InputInterface;
 
 class ConfigurationResolver
