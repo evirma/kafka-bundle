@@ -38,7 +38,7 @@ class EvirmaKafkaExtension extends ConfigurableExtension implements CompilerPass
      */
     protected function loadInternal(array $mergedConfig, ContainerBuilder $container): void
     {
-        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/Resources/config'));
+        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         foreach (self::XML_CONFIGS as $xmlFile) {
             $loader->load($xmlFile.'.xml');
         }
