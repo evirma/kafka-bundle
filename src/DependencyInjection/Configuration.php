@@ -11,6 +11,7 @@ use Evirma\Bundle\KafkaBundle\Configuration\Type\Decoder;
 use Evirma\Bundle\KafkaBundle\Configuration\Type\Denormalizer;
 use Evirma\Bundle\KafkaBundle\Configuration\Type\EnableAutoCommit;
 use Evirma\Bundle\KafkaBundle\Configuration\Type\EnableAutoOffsetStore;
+use Evirma\Bundle\KafkaBundle\Configuration\Type\EnableIdempotence;
 use Evirma\Bundle\KafkaBundle\Configuration\Type\GroupId;
 use Evirma\Bundle\KafkaBundle\Configuration\Type\LogLevel;
 use Evirma\Bundle\KafkaBundle\Configuration\Type\MaxRetries;
@@ -125,6 +126,10 @@ class Configuration implements ConfigurationInterface
             ->end()
             ->scalarNode(EnableAutoCommit::NAME)
             ->defaultValue((new EnableAutoCommit)->getDefaultValue())
+            ->cannotBeEmpty()
+            ->end()
+            ->scalarNode(EnableIdempotence::NAME)
+            ->defaultValue((new EnableIdempotence)->getDefaultValue())
             ->cannotBeEmpty()
             ->end()
 //            ->booleanNode(RegisterMissingSchemas::NAME)
