@@ -5,15 +5,15 @@
         https://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service class="Evirma\Bundle\KafkaBundle\Client\Producer\ProducerProvider"
+        <service class="Evirma\Bundle\KafkaBundle\Producer\ProducerProvider"
                  id="evirma_kafka.client.producer.producer_provider"/>
-        <service id="Evirma\Bundle\KafkaBundle\Client\Producer\ProducerProvider"
+        <service id="Evirma\Bundle\KafkaBundle\Producer\ProducerProvider"
                  alias="evirma_kafka.client.producer.producer_provider"/>
-        <service class="Evirma\Bundle\KafkaBundle\Client\Producer\ProducerClient" id="evirma_kafka.client.producer_client">
+        <service class="Evirma\Bundle\KafkaBundle\Producer\ProducerClient" id="evirma_kafka.client.producer_client">
             <argument type="service" id="evirma_kafka.client.producer.producer_provider"/>
             <argument type="service" id="evirma_kafka.rd_kafka.factory.kafka_configuration_factory"/>
             <argument type="service" id="evirma_kafka.configuration.configuration_resolver"/>
         </service>
-        <service id="Evirma\Bundle\KafkaBundle\Client\Producer\ProducerClient" alias="evirma_kafka.client.producer_client"/>
+        <service id="Evirma\Bundle\KafkaBundle\Producer\ProducerClient" alias="evirma_kafka.client.producer_client"/>
     </services>
 </container>
