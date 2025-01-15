@@ -7,10 +7,12 @@ namespace Evirma\Bundle\KafkaBundle\Command;
 use Evirma\Bundle\KafkaBundle\Configuration\ConfigurationResolver;
 use Evirma\Bundle\KafkaBundle\Producer\ProducerProvider;
 use Evirma\Bundle\KafkaBundle\Traits\DescribeTrait;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
+#[AsCommand('kafka:producers:describe', 'Show producers configuration')]
 class ProducersDescribeCommand extends Command
 {
     use DescribeTrait;

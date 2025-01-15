@@ -7,16 +7,16 @@ namespace Evirma\Bundle\KafkaBundle\Command;
 use Evirma\Bundle\KafkaBundle\Configuration\ConfigurationResolver;
 use Evirma\Bundle\KafkaBundle\Consumer\ConsumerProvider;
 use Evirma\Bundle\KafkaBundle\Traits\DescribeTrait;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
+#[AsCommand('kafka:consumers:describe', 'Show consumers configuration')]
 class ConsumersDescribeCommand extends Command
 {
     use DescribeTrait;
-
-    protected static $defaultName = 'kafka:consumers:describe';
 
     private ConsumerProvider $consumerProvider;
     private ConfigurationResolver $configurationResolver;
@@ -34,7 +34,7 @@ class ConsumersDescribeCommand extends Command
     protected function configure(): void
     {
         $this
-            ->setDescription('Show consumers configuration.')
+            ->setDescription('Show consumers configuration')
             ->addOption('name', null, InputOption::VALUE_REQUIRED, 'Shows specific consumer configuration.');
     }
 

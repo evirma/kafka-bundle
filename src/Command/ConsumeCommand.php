@@ -11,18 +11,18 @@ use Evirma\Bundle\KafkaBundle\Consumer\ConsumerProvider;
 use Evirma\Bundle\KafkaBundle\Contract\ConsumerInterface;
 use Evirma\Bundle\KafkaBundle\Traits\AddConfigurationsToCommandTrait;
 use Evirma\Bundle\KafkaBundle\Traits\DescribeTrait;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
+#[AsCommand('kafka:consumers:consume', 'tarts consuming messages from kafka')]
 class ConsumeCommand extends Command
 {
     use AddConfigurationsToCommandTrait;
     use DescribeTrait;
-
-    protected static $defaultName = 'kafka:consumers:consume';
 
     public function __construct(
         private readonly RawConfiguration $rawConfiguration,
@@ -36,7 +36,9 @@ class ConsumeCommand extends Command
 
     protected function configure(): void
     {
-        $this->setDescription(
+        $this
+            ->setName('kafka:consumers:consume')
+            ->setDescription(
             sprintf(
                 'Starts consuming messages from kafka using class implementing %s.',
                 ConsumerInterface::class
